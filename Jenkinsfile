@@ -1,8 +1,9 @@
-stage('Create Virtual Env') {
-	dir('python/pytest') {
-		sh 'virtualenv -p /usr/bin/python3 venv'
-		sh 'source venv/bin/activate && pip install -r requirements.txt'
-		sh 'source venv/bin/activate && pytest --junit-xml=test_results.xml test || true'
-		junit keepLongStdio: true, allowEmptyResults: true, testResults: 'test_results.xml'
-	}
+pipeline{
+    stage('Create Virtual Env') {
+        bat '''python -m venv env
+        call .\\env\\scripts\\activate
+        pip install -r requirements.txt
+        cmdline.bat'''
+        }
+    }
 }
