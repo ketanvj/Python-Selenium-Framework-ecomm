@@ -5,5 +5,4 @@ pipeline{
         pip install -r requirements.txt
         cmdline.bat'''
         }
-    }
 }
