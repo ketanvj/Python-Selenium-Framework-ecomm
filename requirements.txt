@@ -30,3 +30,4 @@ virtualenv==20.13.1
 virtualenv-clone==0.5.7
 webdriver-manager==3.5.3
 openpyxl==3.0.9
+pytest-xdist==2.5.0
