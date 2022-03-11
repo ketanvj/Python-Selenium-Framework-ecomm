@@ -29,7 +29,6 @@ class Test_001_Login:
             self.driver.close()
             assert False
 
-    @pytest.mark.sanity
     @pytest.mark.regression
     def test_login(self,setup):
 
